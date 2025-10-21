@@ -1,4 +1,10 @@
-# Logistic Regression
+"""
+Logistic Regression Classification
+
+This script demonstrates logistic regression for binary classification
+on the Social Network Ads dataset. It predicts whether a user will
+purchase a product based on their age and estimated salary.
+"""
 
 # Importing the libraries
 import numpy as np
