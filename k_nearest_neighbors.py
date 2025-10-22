@@ -1,4 +1,9 @@
-# K-Nearest Neighbors (K-NN)
+"""
+K-Nearest Neighbors (K-NN) Classification
+
+This script implements K-NN algorithm with k=5 neighbors using
+Minkowski distance metric for classification tasks.
+"""
 
 # Importing the libraries
 import numpy as np
