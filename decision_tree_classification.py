@@ -1,5 +1,11 @@
-# Decision Tree Classification
+"""
+Decision Tree Classification
 
+This script implements a decision tree classifier with entropy criterion
+for predicting user purchase behavior based on demographic data.
+"""
+
+# Importing the libraries
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
