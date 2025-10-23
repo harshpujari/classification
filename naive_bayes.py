@@ -1,4 +1,9 @@
-# Naive Bayes
+"""
+Naive Bayes Classification
+
+This script implements Gaussian Naive Bayes classifier for
+probabilistic classification of user purchase behavior.
+"""
 
 # Importing the libraries
 import numpy as np
