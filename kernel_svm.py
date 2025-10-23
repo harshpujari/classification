@@ -1,4 +1,9 @@
-# Kernel SVM
+"""
+Kernel SVM Classification
+
+This script implements SVM with RBF (Radial Basis Function) kernel
+for non-linear classification problems.
+"""
 
 # Importing the libraries
 import numpy as np
