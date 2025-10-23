@@ -1,4 +1,9 @@
-# Support Vector Machine (SVM)
+"""
+Support Vector Machine (SVM) Classification
+
+This script implements linear SVM classifier for finding the optimal
+hyperplane that separates different classes in the feature space.
+"""
 
 # Importing the libraries
 import numpy as np
