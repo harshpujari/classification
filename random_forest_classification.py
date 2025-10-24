@@ -1,5 +1,11 @@
-# Random Forest Classification
+"""
+Random Forest Classification
 
+This script implements an ensemble learning method using multiple
+decision trees with entropy criterion for robust classification.
+"""
+
+# Importing the libraries
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
