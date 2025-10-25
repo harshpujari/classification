@@ -6,6 +6,8 @@ on the Social Network Ads dataset. It predicts whether a user will
 purchase a product based on their age and estimated salary.
 """
 
+# Features: Age and Estimated Salary
+# Target: Purchased (0 or 1)
 # Importing the libraries
 # Importing the libraries
 import numpy as np
