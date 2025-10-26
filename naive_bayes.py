@@ -39,6 +39,7 @@ classifier.fit(X_train, y_train)
 
 # Predicting a new result
 print(classifier.predict(sc.transform([[30,87000]])))
+# Evaluating model performance with confusion matrix and accuracy
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
