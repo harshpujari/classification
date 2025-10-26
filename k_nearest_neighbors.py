@@ -24,6 +24,7 @@ print(X_test)
 print(y_test)
 
 # Feature Scaling
+# Standardizing features to have mean=0 and variance=1
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
