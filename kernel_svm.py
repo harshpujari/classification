@@ -32,6 +32,7 @@ print(X_train)
 print(X_test)
 
 # Training the Kernel SVM model on the Training set
+# Using RBF kernel for non-linear classification boundaries
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0)
 classifier.fit(X_train, y_train)
