@@ -32,6 +32,7 @@ print(X_train)
 print(X_test)
 
 # Training the SVM model on the Training set
+# Using linear kernel for linearly separable data
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'linear', random_state = 0)
 classifier.fit(X_train, y_train)
