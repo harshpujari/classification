@@ -1,4 +1,9 @@
-# Naive Bayes
+"""
+Naive Bayes Classification
+
+This script implements Gaussian Naive Bayes classifier for
+probabilistic classification of user purchase behavior.
+"""
 
 # Importing the libraries
 import numpy as np
@@ -13,18 +18,12 @@ y = dataset.iloc[:, -1].values
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-print(X_train)
-print(y_train)
-print(X_test)
-print(y_test)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-print(X_train)
-print(X_test)
 
 # Training the Naive Bayes model on the Training set
 from sklearn.naive_bayes import GaussianNB
@@ -39,10 +38,11 @@ y_pred = classifier.predict(X_test)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 
 # Making the Confusion Matrix
+# Evaluating model performance with confusion matrix and accuracy
 from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
-accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy_score(y_test, y_pred))
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap

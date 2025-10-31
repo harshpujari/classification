@@ -1,4 +1,9 @@
-# Kernel SVM
+"""
+Kernel SVM Classification
+
+This script implements SVM with RBF (Radial Basis Function) kernel
+for non-linear classification problems.
+"""
 
 # Importing the libraries
 import numpy as np
@@ -13,20 +18,15 @@ y = dataset.iloc[:, -1].values
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-print(X_train)
-print(y_train)
-print(X_test)
-print(y_test)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-print(X_train)
-print(X_test)
 
 # Training the Kernel SVM model on the Training set
+# Using RBF kernel for non-linear classification boundaries
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0)
 classifier.fit(X_train, y_train)
@@ -42,7 +42,7 @@ print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),
 from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
-accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy_score(y_test, y_pred))
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
