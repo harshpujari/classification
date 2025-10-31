@@ -4,13 +4,14 @@ A collection of machine learning classification algorithms implemented in Python
 
 ## Algorithms Included
 
-- Logistic Regression
-- K-Nearest Neighbors (K-NN)
-- Support Vector Machine (SVM)
-- Kernel SVM
-- Naive Bayes
-- Decision Tree Classification
-- Random Forest Classification
+
+- **Logistic Regression**: Linear model for binary classification using the logistic function
+- **K-Nearest Neighbors (K-NN)**: Instance-based learning using k=5 nearest neighbors
+- **Support Vector Machine (SVM)**: Linear SVM finding optimal separating hyperplane
+- **Kernel SVM**: Non-linear SVM using RBF (Radial Basis Function) kernel
+- **Naive Bayes**: Probabilistic classifier based on Bayes' theorem with Gaussian distribution
+- **Decision Tree**: Tree-based model using entropy criterion for splits
+- **Random Forest**: Ensemble method combining 10 decision trees for robust predictions
 
 ## Dataset
 
