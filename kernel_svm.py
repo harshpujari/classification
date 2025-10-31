@@ -5,6 +5,11 @@ This script implements SVM with RBF (Radial Basis Function) kernel
 for non-linear classification problems.
 """
 
+This script implements SVM with RBF (Radial Basis Function) kernel
+for non-linear classification problems.
+"""
+
+# Importing the libraries
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,16 +17,13 @@ import pandas as pd
 
 # Importing the dataset
 dataset = pd.read_csv('Social_Network_Ads.csv')
-X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, -1].values
-
-# Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
+# Using RBF kernel for non-linear classification boundaries
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 

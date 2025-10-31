@@ -6,6 +6,14 @@ on the Social Network Ads dataset. It predicts whether a user will
 purchase a product based on their age and estimated salary.
 """
 
+This script demonstrates logistic regression for binary classification
+on the Social Network Ads dataset. It predicts whether a user will
+purchase a product based on their age and estimated salary.
+"""
+
+# Features: Age and Estimated Salary
+# Target: Purchased (0 or 1)
+# Importing the libraries
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,8 +30,6 @@ y = dataset.iloc[:, -1].values
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
-# Feature Scaling
-from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
