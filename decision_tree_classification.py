@@ -5,6 +5,10 @@ This script implements a decision tree classifier with entropy criterion
 for predicting user purchase behavior based on demographic data.
 """
 
+This script implements a decision tree classifier with entropy criterion
+for predicting user purchase behavior based on demographic data.
+"""
+
 # Importing the libraries
 # Importing the libraries
 import numpy as np
@@ -18,14 +22,13 @@ y = dataset.iloc[:, -1].values
 
 # Using 75% for training and 25% for testing
 # Splitting the dataset into the Training set and Test set
-print(X_test)
-print(y_test)
+# Using 75% for training and 25% for testing
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 X_test = sc.transform(X_test)
-print(X_train)
-print(X_test)
 
 # Training the Decision Tree Classification model on the Training set
 from sklearn.tree import DecisionTreeClassifier

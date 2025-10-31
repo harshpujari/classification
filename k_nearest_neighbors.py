@@ -5,6 +5,10 @@ This script implements K-NN algorithm with k=5 neighbors using
 Minkowski distance metric for classification tasks.
 """
 
+This script implements K-NN algorithm with k=5 neighbors using
+Minkowski distance metric for classification tasks.
+"""
+
 # Importing the libraries
 # Importing the libraries
 import numpy as np
@@ -15,17 +19,13 @@ import pandas as pd
 dataset = pd.read_csv('Social_Network_Ads.csv')
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-# Standardizing features to have mean=0 and variance=1
-print(X_train)
-print(y_train)
-print(X_test)
+
 # Feature Scaling
+# Standardizing features to have mean=0 and variance=1
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-print(X_train)
-print(X_test)
 
 # Training the K-NN model on the Training set
 from sklearn.neighbors import KNeighborsClassifier

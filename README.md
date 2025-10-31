@@ -4,7 +4,6 @@ A collection of machine learning classification algorithms implemented in Python
 
 ## Algorithms Included
 
-
 - **Logistic Regression**: Linear model for binary classification using the logistic function
 - **K-Nearest Neighbors (K-NN)**: Instance-based learning using k=5 nearest neighbors
 - **Support Vector Machine (SVM)**: Linear SVM finding optimal separating hyperplane

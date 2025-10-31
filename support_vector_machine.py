@@ -5,6 +5,10 @@ This script implements linear SVM classifier for finding the optimal
 hyperplane that separates different classes in the feature space.
 """
 
+This script implements linear SVM classifier for finding the optimal
+hyperplane that separates different classes in the feature space.
+"""
+
 # Importing the libraries
 # Importing the libraries
 import numpy as np
@@ -15,19 +19,16 @@ import pandas as pd
 dataset = pd.read_csv('Social_Network_Ads.csv')
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-print(X_train)
-print(y_train)
-print(X_test)
-print(y_test)
+
+# Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 # Using linear kernel for linearly separable data
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-print(X_train)
-print(X_test)
 
 # Training the SVM model on the Training set
+# Using linear kernel for linearly separable data
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'linear', random_state = 0)
 classifier.fit(X_train, y_train)
